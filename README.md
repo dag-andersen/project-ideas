@@ -30,19 +30,12 @@ Design, Implement and Evaluate infrastructure required by a modern tech stack in
 
 I want vendor-agnostic things like databases, microservices, deployment systems, and production/staging environments to be easily moved between vendors in order to avoid vendor lock-in.
 
-I want to prove that you can build your systems only using open source cloud-native technologies, which you can move between cloud providers without any issues.
+I want to prove that you can build your modern infrastructure (with everything included) only using open source cloud-native technologies, which you can move between cloud providers without any issues.
 
-### 2: Kubernetes Operators (7,5 ects)
-Design, Implement and Evaluate a Kubernetes Operator
-
-Here, the plan is to learn Go and implement a Chaos Monkey (running as a Kubernetes operator).
-
-I am also considering building one in Rust and doing experiments to see which one performs the best. 
-
-### 3: Site Reliability Engineering (22,50 ects)
+### 2: Site Reliability Engineering (22,50 ects)
 
 #### What is the problem we are trying to solve?
-At my previous workplace, I told my boss, "If I was the CEO of the company, I would not be able to sleep at night if i knew the state of the systems - If our stuff goes down, we have no idea how to start it again" ... and he just laughed at me and said, "Well then it is good that he does not know". 
+At my previous workplace, I told my boss, "If I was the CEO of the company, I would not be able to sleep at night if i knew the state of our systems - If our stuff goes down, we have no idea how to start it again" ... and he just laughed at me and said, "Well then it is good that he does not know that". 
 
 Sadly many companies have built infrastructure over the years that they have no idea how to start again if it goes down.
 Maybe the system has constantly been running for years, and the people who got it up and running may have left the company or it is just poorly documented.
@@ -51,9 +44,9 @@ I want to be able to tell my boss/CEO. "Don't worry, boss, if our systems go dow
 
 Kubernetes already has a lot of cool built-in systems with self-healing and health checks, but there is no safety if the whole cluster goes down. I want to make sure that we can also rebuild the whole clusters in no time, should everything go down.
 
-The industry is moving from Pets to Cattle - meaning that we do not treat our systems as pets we need to care about and do everything to survive. Instead, we care about "if the system goes down, can we create a new one". Treat the infrastructure like something we can just tear down and rebuild in no time.
+The industry is moving from Pets to Cattle - meaning that we do not treat our systems as pets we need to care about and protect from any danger. Instead, we care about "if the system goes down, can we create a new one?". Treat the infrastructure like something we can just tear down and rebuild in no time. 
 
-(this idea is fairly new, and it annoys me that it seems like older people in the industry do not seem to think it is possible in practice. I feel very strongly about that. I want to prove that it is possible and should be considered best practice)
+(this idea of _Pets vs. Cattle_ is fairly new, and it annoys me that it seems like some seniors in the industry do not seem to think it is possible in practice. I feel very strongly about that. I want to prove that it is possible and should be considered best practice)
 
 #### What is the contribution to the world?
 
@@ -72,13 +65,13 @@ The system should not only be resilient to container/server crashes, but it shou
 I want to prove that such a system can be done and should be the standard for all new systems.
 
 #### Notes
-- This idea originates from me being annoyed by the infrastructure at my old workplace. They used Kubernetes and they did many things right - but I believe they could do better! I tried to ask myself how I would build the perfect infrastructure/development environment in 2022.
+- This idea originates from me being annoyed by the infrastructure at my old workplace. They used Kubernetes and they did many things right - but I believe they could do better! So I tried to ask myself how I would build the perfect infrastructure/development environment in 2022?
 
 - I did a mini version of this in my free time last summer, but I would like to extend it to include everything a modern development environment requires.
 
 - The scope of this project can easily be scaled up and down depending on how much time I have.
 
-### 4: Chaos Engineering (22,50 ects or Thesis)
+### 3: Chaos Engineering (22,50 ects or Thesis)
 
 Chaos Engineering is the discipline of experimenting on a system in order to build confidence in the system’s capability to withstand turbulent conditions in production. In 2011, Netflix created the project called Chaos Monkey, which kickstarted the Chaos Engineering discipline.
 
@@ -88,30 +81,32 @@ Chaos Engineering is the discipline of experimenting on a system in order to bui
 
 Chaos Engineering is a relatively new concept, and it is far from standardized yet. 
 
-Netflix's original Chaos Monkey is a general-purpose Chaos Monkey. Since the industry is slowly moving to Kubernetes, it would be fitting if there were a good solution to that. 
+Netflix's original Chaos Monkey is a general-purpose Chaos Monkey. Since the industry is slowly moving to Kubernetes, it would be convenient if there were a good Kubernetes specialized solution to that. 
 
 There exist a tool called [Litmus](https://litmuschaos.io/) (maintained by CNCF) that tries to solve this problem. It tries to apply the principles of Chaos Engineering to Kubernetes. Last summer, I tried installing it on my home cluster, but I found it really difficult to use. 
 
 Chaos Engineering is mainly practiced in big tech like Netflix - I think that is a problem!
 
-Small startups do not have time for a week trying to install a system that "just kills their system at random time intervals". But the problem is that you get the most benefit from Chaos Engineering if you apply it from the start. If you want to ensure you build a resilient system, you want to do it from the absolute beginning of the project to ensure that every single service you build can survive crashes, network issues, memory issues, network issues, etc. You have to think that from the beginning - and that is not happing if it is too complicated to get started!
+Small startups do not have time for a week trying to install a system that "just kills their system at random time intervals". But the problem is that you get the most benefit from Chaos Engineering if you apply it from the start. If you want to ensure you build a resilient system, you want to do it from the absolute beginning of the project to ensure that every single service you build can survive crashes, network issues, memory issues, network issues, etc. You have to think that from the beginning - but that is not happing if it is too complicated to get started!
 
 I would argue that the entry barrier is too high currently. It is too difficult to get started resulting in smaller businesses passing on the idea of chaos engineering. 
 
 #### What is the contribution to the world?
 
-> So the question is how do we build a apply the concept of chaos engineering to a Kubernetes setup in order to ensure resiliency?
+> So the question is how do conveniently apply the concept of chaos engineering to a Kubernetes setup in order to ensure resiliency?
 Design, Implement and Evaluate a state-of-the-art Choas Engineering cloud setup.
 
 The plan is to set up a Kubernetes cluster, deploy some simple dummy-services, and create an automated Chaos engineering setup.
 
 This can either be done by trying out a tool called Litmus or building a custom setup myself. As explained, I tried using Litmus, but i couldn't get it working, so I started experimenting with building my own. Last summer, I created a project called [khaos-monkey](https://github.com/dag-andersen/khaos-monkey) (take a look, I think it is pretty cool). This is a simple chaos monkey based on the original idea from Netflix. It is very simple, and the only thing it does is crash containers based on a rule-set/configuration. I would like to extend that idea and build it into a proper tool that injects a lot of different faults into the system.
 
-There exist different approaches to this problem. My contribution to the world is a new method of applying chaos to Kubernetes that is easier to install for smaller projects that don't want to spend days trying to figure out how to set up a complex tool like Litmus. 
+There exist different approaches to this problem. My contribution to the world is a new method of applying chaos to Kubernetes that is (hopefully) easier to install for smaller projects that don't want to spend days trying to figure out how to set up a complex tool like Litmus. 
 
 # Notes
 
-- The problem with this project is that in order to test the Chaos Attacks, you need a fairly comprehensive environment up and running beforehand. You can't test if your systems can survive the chaos if you don't have a system. So I thought it would be best to do this project as a follow-up on ideas 1 or 3.
+- The problem with this project is that in order to test the Chaos Attacks, you need a fairly comprehensive environment up and running beforehand. You can't test if your systems can survive the chaos if you don't have a system. So I thought it would be best to do this project as a Thesis (following up on ideas 1 or 2).
+
+
 
 ## Side Goals
 
