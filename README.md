@@ -37,6 +37,8 @@ I want to prove that you can build your modern infrastructure (with everything i
 
 </details>
 
+---
+
 ### 2: Site Reliability Engineering (22,50 ects)
 
 <details>
@@ -81,6 +83,8 @@ I want to prove that such a system can be done and should be the standard for al
 
 </details>
 
+---
+
 ### 3: Chaos Engineering (22,50 ects or Thesis)
 
 <details>
@@ -121,6 +125,7 @@ There exist different approaches to this problem. My contribution to the world i
 
 </details>
 
+---
 
 ## Side Goals
 
