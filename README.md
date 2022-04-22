@@ -12,6 +12,9 @@ I will write my thesis (30 ects)
 
 ### 1: Cloud Native (22,50 ects)
 
+<details>
+  <summary>expand</summary>
+
 #### What is the problem we are trying to solve?
 
 One of the main reasons companies hesitate to migrate to the cloud is the fear of vendor lock-in. Ending up being dependent on a specific cloud provider, and making it close to impossible ever to switch providers because it would be too expensive.
@@ -32,7 +35,12 @@ I want vendor-agnostic things like databases, microservices, deployment systems,
 
 I want to prove that you can build your modern infrastructure (with everything included) only using open source cloud-native technologies, which you can move between cloud providers without any issues.
 
+</details>
+
 ### 2: Site Reliability Engineering (22,50 ects)
+
+<details>
+  <summary>expand</summary>
 
 #### What is the problem we are trying to solve?
 At my previous workplace, I told my boss, "If I was the CEO of the company, I would not be able to sleep at night if i knew the state of our systems - If our stuff goes down, we have no idea how to start it again" ... and he just laughed at me and said, "Well then it is good that he does not know that". 
@@ -71,7 +79,12 @@ I want to prove that such a system can be done and should be the standard for al
 
 - The scope of this project can easily be scaled up and down depending on how much time I have.
 
+</details>
+
 ### 3: Chaos Engineering (22,50 ects or Thesis)
+
+<details>
+  <summary>expand</summary>
 
 Chaos Engineering is the discipline of experimenting on a system in order to build confidence in the system’s capability to withstand turbulent conditions in production. In 2011, Netflix created the project called Chaos Monkey, which kickstarted the Chaos Engineering discipline.
 
@@ -106,6 +119,7 @@ There exist different approaches to this problem. My contribution to the world i
 
 - The problem with this project is that in order to test the Chaos Attacks, you need a fairly comprehensive environment up and running beforehand. You can't test if your systems can survive the chaos if you don't have a system. So I thought it would be best to do this project as a Thesis (following up on ideas 1 or 2).
 
+</details>
 
 
 ## Side Goals
@@ -123,10 +137,10 @@ There exist different approaches to this problem. My contribution to the world i
 - Chaos Engineering
 - Rust
 - Go
-- Low-level stuff like memory management, thread pools, compilers, etc.
+- Low-level stuff like memory management, thread management, compilers, etc.
 
 ## Bachelor's Project 2020
-- Supervised by Philippe Bonnet
+- Supervised by [Philippe Bonnet](https://www.itu.dk/people/phbo/)
 - The project was about how cache utilization impacts performance when working with memory-mapped files.
 - I used it as an "excuse" to learn Rust (Which is now my favorite language)
 - [Report Link](https://github.com/dag-andersen/Rust-Memory-Map/blob/master/docs/Bachelor_Report.pdf)
