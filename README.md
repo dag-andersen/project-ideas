@@ -16,8 +16,8 @@ I will write my thesis (30 ects)
 *TL;DR:* How to build a reliability and repeatable cloud environment in order to ensure the highest availability and the lowest MTTR?
 - [Chaos Engineering (22,50 ects)](idea3.md)
 *TL;DR:* How do conveniently apply the concept of chaos engineering to a Kubernetes setup in order to ensure resiliency?
-- [(de)scheduling workload (22,50 ects)](idea4.md)
-*TL;DR:* How much can introducing an aggressive/eager de-scheduler lower the resource-cost on an auto-managed Kubernetes cluster (without lowering the uptime)? 
+- [(de)scheduling to minimize wasted resources (22,50 ects)](idea4.md)
+*TL;DR:* How much can introducing an de/re-scheduler lower the resource-cost on an auto-managed Kubernetes cluster (without lowering the uptime)? 
 
 ## Side Goals
 
