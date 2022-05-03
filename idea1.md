@@ -13,7 +13,7 @@ Instead, you want a fully cloud agnostic setup that you can move from one vendor
 I claim that most companies do a lot of research on which cloud provider to pick and then expect to stay there for the many years to come because they expect it to be very costly to change afterward.
 
 ## What is the contribution to the world?
-> So the question is, how can you build a modern software stack in cloud-native technologies to avoid vendor lock-in?
+> So the question is, how can you build a complete modern software stack in cloud-native technologies to avoid vendor lock-in?
 Design, Implement and Evaluate infrastructure required by a modern tech stack in cloud-native technologies that can be deployed to ANY popular cloud provider.
 
 I want vendor-agnostic things like databases, microservices, deployment systems, and production/staging environments to be easily moved between vendors in order to avoid vendor lock-in.

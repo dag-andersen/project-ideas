@@ -11,7 +11,7 @@ I will write my thesis (30 ects)
 ## Ideas
 
 - [Cloud Native (22,50 ects)](idea1.md)
-*TL;DR:* How can you build a modern software stack in cloud-native technologies to avoid vendor lock-in?
+*TL;DR:* How can you build a complete modern software stack in cloud-native technologies to avoid vendor lock-in?
 - [Site Reliability Engineering (22,50 ects)](idea2.md)
 *TL;DR:* How to build a reliability and repeatable cloud environment in order to ensure the highest availability and the lowest MTTR?
 - [Chaos Engineering (22,50 ects)](idea3.md)

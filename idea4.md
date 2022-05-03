@@ -21,11 +21,20 @@ Not all services can handle getting evicted at arbitrary intervals.
 
 > How much can introducing an de/re-scheduler lower the resource-cost on an auto-managed Kubernetes cluster (without lowering the uptime)? 
 
-It is possible to look at scheduling algorithms (dynamic programming) for distributing pods across nodes and lower the amount of unused resources.
+It is possible to look at scheduling algorithms (dynamic programming?) for distributing pods across nodes and lower the amount of unused resources.
 
 Solving this problem is not only about implementing a de-scheduler but also about preparing your services to understand how they do a graceful shutdown and how they tell the cluster their current state through health-checks.
 
 Hopefully, this project will answer whether de-scheduling could lower the cost by a significant amount. 
+
+## I am expecting project to go along the lines of
+- Setup a Kubernetes cluster
+- Setup some dummy servers with health-checks and graceful shutdown.
+- Design and implement a custom scheduler and de-scheduler for Kubernetes. 
+- Write experiments testing the cluster-setup and schedulers for different scenarios.
+- Iterate over different algorithm designs and use-cases and compare them.
+- Evaluate if we can lower the resource cost by continuously re-scheduling pods in order to balance the load across nodes (- or maybe the added overhead just ends up using more resources)
+- Give a final conclusion if rescheduling can save you resources or it is not worth it in practice. 
 
 ## Why do I like this project?
 - Very clear resource to measure - Pure Cost
