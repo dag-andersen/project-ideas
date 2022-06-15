@@ -19,9 +19,9 @@
 *TL;DR:* How do conveniently apply the concept of chaos engineering to a Kubernetes setup in order to ensure resiliency?
 - [(de)scheduling to minimize wasted resources (22,50 ects)](descheduling.md)
 *TL;DR:* How much can introducing an de/re-scheduler lower the resource-cost on an auto-managed Kubernetes cluster (without lowering the uptime)? 
-- [Utilizing kubernetes as an universal control plane (22,50 ects)](control-planes.md) (_Not finalized_)
+- [Utilizing kubernetes as an universal control plane (22,50 ects)](control-planes.md)
 *TL;DR:* Explore the benefits of shifting to control planes
-- [Hashicorp Nomad vs. Kubernetes (22,50 ects)](control-planes.md) (_Not finalized_)
+- [Hashicorp Nomad vs. Kubernetes (22,50 ects)](nomad.md) (_Not finalized_)
 - [Generic DevOps Metric system (? ects)](generic-dev-ops-metric-system.md)
 
 ## Side Goals
