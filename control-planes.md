@@ -1,6 +1,6 @@
 # Utilizing Kubernetes as an universal control plane
 
-Control planes are said to be the next big thing in infrastructure managing. 
+Control planes are said to be the next big thing in infrastructure management. 
 
 ![](images/scripting-to-control-planes.png)
 
@@ -34,6 +34,8 @@ Control planes are said to be the next big thing in infrastructure managing.
 - https://blog.crossplane.io/crossplane-vs-terraform/
 - https://youtu.be/UffM5Gr1m-0
 - https://www.youtube.com/watch?v=UffM5Gr1m-0&ab_channel=Crossplane
+- https://betterprogramming.pub/crossplane-and-beyond-36a7cd855ce0
+
 
 
 ## Alternatives:
